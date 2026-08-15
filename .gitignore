@@ -1,0 +1,82 @@
+# .gitignore — Amirhossein.dev portfolio
+#
+# This repo is a STATIC SITE that is published as-is. Everything the browser
+# needs (index.html, css/, js/, vendor/, assets/) must be committed, so this
+# file only excludes things that are generated, local, or private.
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.sid
+
+# Node — dependencies are dev-only (test suite). Never commit the tree itself.
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+
+# package-lock.json is deliberately NOT ignored. It pins the exact dev
+# dependency tree (jsdom, @napi-rs/canvas) so `npm ci` reproduces the
+# environment the tests were verified against. Do not add it here.
+
+# Python (only ever used as a throwaway static server: python -m http.server)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Generated build + proof artefacts (all reproducible from the test/ scripts)
+portfolio-standalone.html
+hitmap.png
+cards/
+photo-proof.png
+minimap-proof.png
+poster-out/
+
+# Scratch/debug pages. Anything named _t_*.html is a temporary probe — these
+# must never reach a public repo or GitHub Pages.
+_t_*.html
+_probe*.js
+_wtest*.txt
+
+# Sensitive info. There are no secrets in this project (no backend, no API keys,
+# no wallet) — these patterns are here so an accident cannot become a commit.
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+credentials.json
+
+# Build / cache / coverage artefacts (this project has no build step, but these
+# must never be committed if one is ever added)
+dist/
+build/
+.cache/
+coverage/

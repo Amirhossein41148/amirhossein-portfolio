@@ -1,0 +1,35 @@
+{
+  "name": "amirhossein-portfolio",
+  "version": "1.0.0",
+  "description": "Walkable cyberpunk 3D portfolio built with Three.js",
+  "private": true,
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "test": "node test/headless.test.js && node test/headless.test.js --mobile && node test/headless.test.js --force-qs && node test/headless.test.js --weak-gpu --mobile && node test/headless.test.js --mid-gpu --mobile && node test/headless.test.js --one-context --mobile && node test/headless.test.js --no-webgl --mobile && node test/real-three.test.js && node test/standalone.test.js && node test/standalone.test.js --no-webgl && node test/orphan.test.js && node test/hittest.test.js && node test/lightbox.test.js && node test/mobile-layout.test.js",
+    "test:dom": "node test/headless.test.js",
+    "test:mobile": "node test/headless.test.js --mobile",
+    "test:forced": "node test/headless.test.js --force-qs",
+    "test:weak": "node test/headless.test.js --weak-gpu --mobile",
+    "test:mid": "node test/headless.test.js --mid-gpu --mobile",
+    "test:onectx": "node test/headless.test.js --one-context --mobile",
+    "test:nogl": "node test/headless.test.js --no-webgl --mobile",
+    "test:standalone": "node test/standalone.test.js && node test/standalone.test.js --no-webgl",
+    "test:orphan": "node test/orphan.test.js",
+    "test:hittest": "node test/hittest.test.js",
+    "hitmap": "node test/render-hitmap.js hitmap.png",
+    "bundle": "node test/bundle.js",
+    "photos:bake": "node test/bake-photos.js",
+    "test:three": "node test/real-three.test.js",
+    "posters": "node test/render-posters.js cards",
+    "photos": "node test/verify-photos.js photo-proof.png",
+    "minimap": "node test/render-minimap.js minimap-proof.png"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.3"
+  },
+  "optionalDependencies": {
+    "@napi-rs/canvas": "^1.0.5"
+  },
+  "author": "Amirhossein Safaei",
+  "license": "MIT"
+}
