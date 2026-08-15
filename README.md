@@ -5,8 +5,7 @@ page — you are standing in a plaza, and the sections of the portfolio are glow
 pillars you walk up to. Gallery rings behind two of the pillars hold card stands
 you can walk around and open full size.
 
-Live: `https://USERNAME.github.io/REPOSITORY/`
-(replace with your own once GitHub Pages is enabled)
+🔗 **Live:** https://amirhossein41148.github.io/amirhossein-portfolio/
 
 ---
 
