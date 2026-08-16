@@ -80,3 +80,7 @@ dist/
 build/
 .cache/
 coverage/
+
+# Test suite — local dev only. Contains eval() and child_process for offline
+# testing, which triggers false-positive malware scans on public repos.
+test/
